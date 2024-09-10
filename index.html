@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">Shoppee</div>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search products...">
+        <button id="search-btn">Search</button>
+    </div>
+    <div class="cart-icon">
+        <button id="view-cart-btn">Cart (<span id="cart-count">0</span>)</button>
+    </div>
+</header>
+
+<main>
+    <section class="filters">
+        <button data-category="all" class="filter-btn">All</button>
+        <button data-category="food" class="filter-btn">Food</button>
+        <button data-category="drinks" class="filter-btn">Drinks</button>
+        <button data-category="beverages" class="filter-btn">Beverages</button>
+    </section>
+
+    <section class="products-grid">
+        <!-- Products -->
+        <!-- Product 1 -->
+        <div class="product-card" data-id="1" data-category="food">
+            <img src="https://via.placeholder.com/200" alt="Product 1">
+            <h2>Product 1</h2>
+            <p class="brand">Brand: Brand A</p>
+            <p class="price">Price: $20.00</p>
+            <p class="weight">Weight: 500g</p>
+            <p class="store">Store: Store Alpha</p>
+            <label for="quantity-1">Quantity:</label>
+            <input type="number" id="quantity-1" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-id="2" data-category="drinks">
+            <img src="https://via.placeholder.com/200" alt="Product 2">
+            <h2>Product 2</h2>
+            <p class="brand">Brand: Brand B</p>
+            <p class="price">Price: $35.00</p>
+            <p class="volume">Volume: 1L</p>
+            <p class="store">Store: Store Beta</p>
+            <label for="quantity-2">Quantity:</label>
+            <input type="number" id="quantity-2" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-id="3" data-category="beverages">
+            <img src="https://via.placeholder.com/200" alt="Product 3">
+            <h2>Product 3</h2>
+            <p class="brand">Brand: Brand C</p>
+            <p class="price">Price: $40.00</p>
+            <p class="weight">Weight: 750g</p>
+            <p class="store">Store: Store Gamma</p>
+            <label for="quantity-3">Quantity:</label>
+            <input type="number" id="quantity-3" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" data-id="4" data-category="food">
+            <img src="https://via.placeholder.com/200" alt="Product 4">
+            <h2>Product 4</h2>
+            <p class="brand">Brand: Brand D</p>
+            <p class="price">Price: $50.00</p>
+            <p class="volume">Volume: 1.5L</p>
+            <p class="store">Store: Store Delta</p>
+            <label for="quantity-4">Quantity:</label>
+            <input type="number" id="quantity-4" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card" data-id="5" data-category="food">
+            <img src="https://via.placeholder.com/200" alt="Product 5">
+            <h2>Product 5</h2>
+            <p class="brand">Brand: Brand E</p>
+            <p class="price">Price: $60.00</p>
+            <p class="weight">Weight: 1kg</p>
+            <p class="store">Store: Store Epsilon</p>
+            <label for="quantity-5">Quantity:</label>
+            <input type="number" id="quantity-5" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card" data-id="6" data-category="drinks">
+            <img src="https://via.placeholder.com/200" alt="Product 6">
+            <h2>Product 6</h2>
+            <p class="brand">Brand: Brand F</p>
+            <p class="price">Price: $25.00</p>
+            <p class="weight">Weight: 250g</p>
+            <p class="store">Store: Store Zeta</p>
+            <label for="quantity-6">Quantity:</label>
+            <input type="number" id="quantity-6" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card" data-id="7" data-category="beverages">
+            <img src="https://via.placeholder.com/200" alt="Product 7">
+            <h2>Product 7</h2>
+            <p class="brand">Brand: Brand G</p>
+            <p class="price">Price: $70.00</p>
+            <p class="volume">Volume: 2L</p>
+            <p class="store">Store: Store Eta</p>
+            <label for="quantity-7">Quantity:</label>
+            <input type="number" id="quantity-7" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card" data-id="8" data-category="food">
+            <img src="https://via.placeholder.com/200" alt="Product 8">
+            <h2>Product 8</h2>
+            <p class="brand">Brand: Brand H</p>
+            <p class="price">Price: $80.00</p>
+            <p class="weight">Weight: 1.5kg</p>
+            <p class="store">Store: Store Theta</p>
+            <label for="quantity-8">Quantity:</label>
+            <input type="number" id="quantity-8" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product-card" data-id="9" data-category="drinks">
+            <img src="https://via.placeholder.com/200" alt="Product 9">
+            <h2>Product 9</h2>
+            <p class="brand">Brand: Brand I</p>
+            <p class="price">Price: $90.00</p>
+            <p class="volume">Volume: 1.8L</p>
+            <p class="store">Store: Store Iota</p>
+            <label for="quantity-9">Quantity:</label>
+            <input type="number" id="quantity-9" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product-card" data-id="10" data-category="beverages">
+            <img src="https://via.placeholder.com/200" alt="Product 10">
+            <h2>Product 10</h2>
+            <p class="brand">Brand: Brand J</p>
+            <p class="price">Price: $100.00</p>
+            <p class="weight">Weight: 2kg</p>
+            <p class="store">Store: Store Kappa</p>
+            <label for="quantity-10">Quantity:</label>
+            <input type="number" id="quantity-10" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="product-card" data-id="11" data-category="food">
+            <img src="https://via.placeholder.com/200" alt="Product 11">
+            <h2>Product 11</h2>
+            <p class="brand">Brand: Brand K</p>
+            <p class="price">Price: $110.00</p>
+            <p class="weight">Weight: 1.2kg</p>
+            <p class="store">Store: Store Lambda</p>
+            <label for="quantity-11">Quantity:</label>
+            <input type="number" id="quantity-11" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="product-card" data-id="12" data-category="drinks">
+            <img src="https://via.placeholder.com/200" alt="Product 12">
+            <h2>Product 12</h2>
+            <p class="brand">Brand: Brand L</p>
+            <p class="price">Price: $55.00</p>
+            <p class="volume">Volume: 1.2L</p>
+            <p class="store">Store: Store Mu</p>
+            <label for="quantity-12">Quantity:</label>
+            <input type="number" id="quantity-12" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 13 -->
+        <div class="product-card" data-id="13" data-category="beverages">
+            <img src="https://via.placeholder.com/200" alt="Product 13">
+            <h2>Product 13</h2>
+            <p class="brand">Brand: Brand M</p>
+            <p class="price">Price: $65.00</p>
+            <p class="weight">Weight: 900g</p>
+            <p class="store">Store: Store Nu</p>
+            <label for="quantity-13">Quantity:</label>
+            <input type="number" id="quantity-13" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 14 -->
+        <div class="product-card" data-id="14" data-category="food">
+            <img src="https://via.placeholder.com/200" alt="Product 14">
+            <h2>Product 14</h2>
+            <p class="brand">Brand: Brand N</p>
+            <p class="price">Price: $75.00</p>
+            <p class="weight">Weight: 1.3kg</p>
+            <p class="store">Store: Store Xi</p>
+            <label for="quantity-14">Quantity:</label>
+            <input type="number" id="quantity-14" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 15 -->
+        <div class="product-card" data-id="15" data-category="drinks">
+            <img src="https://via.placeholder.com/200" alt="Product 15">
+            <h2>Product 15</h2>
+            <p class="brand">Brand: Brand O</p>
+            <p class="price">Price: $85.00</p>
+            <p class="volume">Volume: 1.4L</p>
+            <p class="store">Store: Store Omicron</p>
+            <label for="quantity-15">Quantity:</label>
+            <input type="number" id="quantity-15" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 16 -->
+        <div class="product-card" data-id="16" data-category="beverages">
+            <img src="https://via.placeholder.com/200" alt="Product 16">
+            <h2>Product 16</h2>
+            <p class="brand">Brand: Brand P</p>
+            <p class="price">Price: $95.00</p>
+            <p class="weight">Weight: 1.8kg</p>
+            <p class="store">Store: Store Pi</p>
+            <label for="quantity-16">Quantity:</label>
+            <input type="number" id="quantity-16" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 17 -->
+        <div class="product-card" data-id="17" data-category="food">
+            <img src="https://via.placeholder.com/200" alt="Product 17">
+            <h2>Product 17</h2>
+            <p class="brand">Brand: Brand Q</p>
+            <p class="price">Price: $105.00</p>
+            <p class="weight">Weight: 1.4kg</p>
+            <p class="store">Store: Store Rho</p>
+            <label for="quantity-17">Quantity:</label>
+            <input type="number" id="quantity-17" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 18 -->
+        <div class="product-card" data-id="18" data-category="drinks">
+            <img src="https://via.placeholder.com/200" alt="Product 18">
+            <h2>Product 18</h2>
+            <p class="brand">Brand: Brand R</p>
+            <p class="price">Price: $115.00</p>
+            <p class="volume">Volume: 1.6L</p>
+            <p class="store">Store: Store Sigma</p>
+            <label for="quantity-18">Quantity:</label>
+            <input type="number" id="quantity-18" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 19 -->
+        <div class="product-card" data-id="19" data-category="beverages">
+            <img src="https://via.placeholder.com/200" alt="Product 19">
+            <h2>Product 19</h2>
+            <p class="brand">Brand: Brand S</p>
+            <p class="price">Price: $125.00</p>
+            <p class="weight">Weight: 2.2kg</p>
+            <p class="store">Store: Store Tau</p>
+            <label for="quantity-19">Quantity:</label>
+            <input type="number" id="quantity-19" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 20 -->
+        <div class="product-card" data-id="20" data-category="food">
+            <img src="https://via.placeholder.com/200" alt="Product 20">
+            <h2>Product 20</h2>
+            <p class="brand">Brand: Brand T</p>
+            <p class="price">Price: $135.00</p>
+            <p class="weight">Weight: 1.6kg</p>
+            <p class="store">Store: Store Upsilon</p>
+            <label for="quantity-20">Quantity:</label>
+            <input type="number" id="quantity-20" value="1" min="1">
+            <button class="add-product-btn">Add to Cart</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Shoppee. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
